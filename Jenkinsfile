@@ -22,6 +22,15 @@ pipeline {
                 }
             }
         }
+        stage('Test Jmeter') {
+            agent {
+                image 'justb4/jmeter'
+            }
+            steps {
+                sh 'jmeter -version'
+            }
+        
+        }
         stage('Deliver Third') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
