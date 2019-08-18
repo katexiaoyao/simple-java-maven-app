@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Test Second') {
             steps {
+                sh 'pwd'
                 sh 'mvn test'
             }
             post {
