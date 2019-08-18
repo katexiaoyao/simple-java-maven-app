@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test Second') {
             steps {
-                sh 'pwd'
+                sh 'whereis mvn'
                 sh 'mvn test'
             }
             post {
