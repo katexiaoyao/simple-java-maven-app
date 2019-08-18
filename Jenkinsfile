@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test Jmeter') {
             agent {
-                image 'justb4/jmeter'
+                docker { image 'justb4/jmeter'}
             }
             steps {
                 sh 'jmeter -version'
