@@ -23,14 +23,11 @@ pipeline {
             }
         }
         stage('Test Jmeter') {
-            agent {
-                docker { image 'justb4/jmeter'}
-            }
             steps {
-                sh 'jmeter -version'
+                sh 'cd /home/Documents/JMeter5.1/apache-jmeter-5.1.1/bin/'
+                sh './jmeter -version'
             }
-        
-        }
+        }  
         stage('Deliver Third') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
