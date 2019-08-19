@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Test Jmeter') {
             steps {
-                sh 'cd /home/Documents/JMeter5.1/apache-jmeter-5.1.1/bin/ && ./jmeter -version'
+                sh './test/test.sh'
             }
         }  
         stage('Deliver Third') {
